@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Reporte de Gastos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>RUC</th>
+          <th>Valor</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let gasto of gastos">
+          <td>{{ gasto.tipo }}</td>
+          <td>{{ gasto.ruc }}</td>
+          <td>{{ gasto.valor }}</td>
+          <td>{{ gasto.createdAt | date:'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

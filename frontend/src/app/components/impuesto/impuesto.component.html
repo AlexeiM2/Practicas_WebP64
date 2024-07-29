@@ -1,0 +1,46 @@
+<form>
+    <h2>Formulario para el cálculo</h2>
+  
+    <div class="form-group">
+      <label for="cedula">Número de cédula</label>
+      <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="cedula">
+    </div>
+  
+    <div class="form-group">
+      <label for="sueldo">Sueldo anual</label>
+      <input type="number" class="form-control" id="sueldo" name="sueldo" [(ngModel)]="sueldo">
+    </div>
+  
+    <div class="form-group">
+      <label for="deduccionVivienda">Deducción Vivienda</label>
+      <input type="number" class="form-control" id="deduccionVivienda" name="deduccionVivienda" [(ngModel)]="deduccionVivienda">
+    </div>
+  
+    <div class="form-group">
+      <label for="deduccionEducacion">Deducción Educación</label>
+      <input type="number" class="form-control" id="deduccionEducacion" name="deduccionEducacion" [(ngModel)]="deduccionEducacion">
+    </div>
+  
+    <div class="form-group">
+      <label for="deduccionVestimenta">Deducción Vestimenta</label>
+      <input type="number" class="form-control" id="deduccionVestimenta" name="deduccionVestimenta" [(ngModel)]="deduccionVestimenta">
+    </div>
+  
+    <div class="form-group">
+      <label for="deduccionAlimentacion">Deducción Alimentación</label>
+      <input type="number" class="form-control" id="deduccionAlimentacion" name="deduccionAlimentacion" [(ngModel)]="deduccionAlimentacion">
+    </div>
+  
+    <div class="form-group">
+      <label for="deduccionSalud">Deducción Salud</label>
+      <input type="number" class="form-control" id="deduccionSalud" name="deduccionSalud" [(ngModel)]="deduccionSalud">
+    </div>
+  
+    <button type="button" class="btn btn-primary" (click)="Calcular()">Calcular Impuesto</button>
+  </form>
+  
+  <div *ngIf="renta_calculada">
+    <h3>Resultado del cálculo:</h3>
+    <p>Impuesto calculado: {{renta_calculada}}</p>
+  </div>
+  

@@ -1,0 +1,40 @@
+<H1 class="text-center text-primary">Calculadora Sri</H1>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/tasks" routerLinkActive="active">TAREAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/private-tasks" routerLinkActive="active">PRIVADO</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/registro" routerLinkActive="active">REGISTRO</a>
+            </li>
+          </ng-container>
+          <ng-template #loggedIn>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" (click)="authService.logout()">LOGOUT</a>
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container p-5">
+  <router-outlet></router-outlet>
+</div>
+
+

@@ -1,0 +1,23 @@
+<div class="row">
+        <div class="card">
+            <div class="card-header">
+                LOGIN
+            </div>
+            <div class="card-body">
+                <form (submit)="singIn()">
+                    <div class="form-group">
+                        <label for="">User</label>
+                        <input type="text" [(ngModel)]="user.email" name="email" class="form-control" placeholder="" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" [(ngModel)]="user.password" name="password" class="form-control" placeholder="" required>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">
+                        Login
+                    </button>
+                </form>
+                <p class="text-danger mt-3" *ngIf="errorMessage">{{ errorMessage }}</p> 
+            </div>
+        </div>
+  </div>

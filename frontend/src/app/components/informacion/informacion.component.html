@@ -1,0 +1,12 @@
+<!-- informacion.component.html -->
+<div *ngFor="let deducible of deducibles">
+  <div class="card" style="width: 40rem;">
+    <img [src]="getPath(deducible)" style="width: 15rem;" class="card-img-top" alt="{{ deducible }} ">
+    <div class="card-body">
+      <h5 class="card-title">{{ deducible }}</h5>
+      <p class="card-text">Descripción deducible: <b>{{ descripcion(deducible) }}</b></p>
+      <button (click)="informacion(deducible)" class="btn btn-info">Información</button>
+      <button (click)="borrar(deducible)" class="btn btn-danger">Borrar</button>
+    </div>
+  </div>
+</div>
